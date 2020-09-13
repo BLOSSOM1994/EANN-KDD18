@@ -23,11 +23,11 @@ from gensim.models import Word2Vec
 
 def stopwordslist(filepath = '/content/EANN-KDD18/data/weibo/stop_words.txt'):
     stopwords = {}
-    for line in open(filepath, 'r').readlines():
+    #for line in open(filepath, 'r').readlines():
     #    line = unicode(line, "utf-8").strip()
-         line =line.decode('utf8').strip()
+    #     line =line.decode('utf8').strip()
     #    stopwords[line] = 1
-    #stopwords = [line.strip() for line in open(filepath, 'r', encoding='utf-8').readlines()]
+    stopwords = [line.strip() for line in open(filepath, 'r', encoding='utf-8').readlines()]
     return stopwords
 
 def clean_str_sst(string):
