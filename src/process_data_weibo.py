@@ -1,3 +1,4 @@
+!pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
 # encoding=utf-8
 import _pickle as pickle
 import random
@@ -119,7 +120,6 @@ def write_data(flag, image, text_only):
                 # print(key/3)
                 # continue
 
-                l=unicode(l, "utf-8")
                 if (i + 1) % 3 == 1:
                     line_data = []
                     twitter_id = l.split('|')[0]
