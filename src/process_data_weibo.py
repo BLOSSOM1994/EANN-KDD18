@@ -119,7 +119,7 @@ def write_data(flag, image, text_only):
                 # print(key/3)
                 # continue
 
-
+                l=unicode(l, "utf-8")
                 if (i + 1) % 3 == 1:
                     line_data = []
                     twitter_id = l.split('|')[0]
