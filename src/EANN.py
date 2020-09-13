@@ -4,7 +4,7 @@ import time, os
 # import random
 import process_data_weibo as process_data
 import copy
-import pickle as pickle
+import _pickle as pickle
 from random import sample
 import torchvision
 from sklearn.model_selection import train_test_split
@@ -481,7 +481,7 @@ def get_top_post(output, label, test_id, top_n = 500):
     for i in top_n_id:
         top_n_id_dict[i] = True
 
-    pickle.dump(top_n_id_dict, open("../Data/weibo/top_n_id.pickle", "wb"))
+    pickle.dump(top_n_id_dict, open("/content/EANN-KDD18/data/weibo/top_n_id.pickle", "wb"))
 
     return top_n_id
 
@@ -514,7 +514,7 @@ def word2vec(post, word_id_map, W):
 def load_data(args):
     train, validate, test = process_data.get_data(args.text_only)
     #print(train[4][0])
-    word_vector_path = '../Data/weibo/word_embedding.pickle'
+    word_vector_path = '/content/EANN-KDD18/data/weibo/word_embedding.pickle'
     f = open(word_vector_path, 'rb')
     weight = pickle.load(f)  # W, W2, word_idx_map, vocab
     W, W2, word_idx_map, vocab, max_len = weight[0], weight[1], weight[2], weight[3], weight[4]
@@ -552,7 +552,7 @@ if __name__ == '__main__':
     parser = parse_arguments(parse)
     train = '' 
     test = ''
-    output = '../Data/weibo/RESULT/'
+    output = '/content/EANN-KDD18/data/weibo/RESULT/'
     args = parser.parse_args([train, test, output])
     
     main(args)
