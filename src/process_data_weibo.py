@@ -1,4 +1,4 @@
-!pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
+#!pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
 # encoding=utf-8
 import _pickle as pickle
 import random
