@@ -166,7 +166,7 @@ def write_data(flag, image, text_only):
         data_df = pd.DataFrame(np.array(data), columns=column)
         write_txt(top_data)
 
-        return post_content, data_df
+        return post_content, data_df.astype(object)
 
     post_content, post = read_post(flag)
     print("Original post length is " + str(len(post_content)))
