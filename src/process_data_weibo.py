@@ -1,5 +1,5 @@
 #!pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
-# encoding=utf-8
+encoding=utf-8
 import _pickle as pickle
 import random
 from random import *
@@ -132,8 +132,9 @@ def write_data(flag, image, text_only):
                     line_data.append(l.lower())
 
                 if (i + 1) % 3 == 0:
-                    l = clean_str_sst(unicode(l, "utf-8"))
-
+                   # l = clean_str_sst(unicode(l, "utf-8"))
+                    l = clean_str_sst(str(l))
+                    
                     seg_list = jieba.cut_for_search(l)
                     new_seg_list = []
                     for word in seg_list:
