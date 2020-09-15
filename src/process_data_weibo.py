@@ -161,7 +161,7 @@ def write_data(flag, image, text_only):
 
             f.close()
             print(data)
-            return post_content
+            return post_content,data
         
         data_df = pd.DataFrame(np.array(data), columns=column)
         write_txt(top_data)
