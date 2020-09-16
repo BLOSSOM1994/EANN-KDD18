@@ -85,13 +85,13 @@ def write_data(flag, image, text_only):
         file_list = [pre_path + "test_nonrumor.txt", pre_path + "test_rumor.txt", \
                          pre_path + "train_nonrumor.txt", pre_path + "train_rumor.txt"]
         if flag == "train":
-            print("train")
+           # print("train")
             id = pickle.load(open("/content/EANN-KDD18/data/weibo/train_id.pickle", 'rb'))
         elif flag == "validate":
-            print("validation")
+           # print("validation")
             id = pickle.load(open("/content/EANN-KDD18/data/weibo/validate_id.pickle", 'rb'))
         elif flag == "test":
-            print("test")
+           # print("test")
             id = pickle.load(open("/content/EANN-KDD18/data/weibo/test_id.pickle", 'rb'))
 
 
@@ -144,10 +144,9 @@ def write_data(flag, image, text_only):
                             new_seg_list.append(word)
 
                     clean_l = " ".join(new_seg_list)
-                    print("13243244543546756768678-----------------"+str(len(clean_l)))
-                    print(line_data[0] in id)
-                    if len(clean_l) > 10 and line_data[0] in id:
-                        
+                    
+                    if len(clean_l) > 10 :
+                        #and line_data[0] in id
                         post_content.append(l)
                         line_data.append(l)
                         line_data.append(clean_l)
@@ -160,18 +159,14 @@ def write_data(flag, image, text_only):
                             event = map_id[event]
 
                         line_data.append(event)
-                        print("111111111111111111111111111111111111"+line_data)
                         data.append(line_data)
-                        print("\n\t"+data)
 
-            print(key)
             f.close()
-            print(np.array(data))
-            return post_content,data
+    #        return post_content,data
         
-    #    data_df = pd.DataFrame(np.array(data), columns=column)
-   #     write_txt(top_data)
-    #    print(data_df)
+        data_df = pd.DataFrame(np.array(data), columns=column)
+        write_txt(top_data)
+        print(data_df)
         return post_content, data_df
 
     post_content, post = read_post(flag)
@@ -204,13 +199,13 @@ def write_data(flag, image, text_only):
         ordered_post = []
         ordered_event= []
         label = []
-        post_id = 0
+        post_id = []
         image_id_list = []
         #image = []
 
         image_id = ""
-        print(post[post_id])
-        for i, id in enumerate(len(post[post_id])):
+       
+        for i, id in enumerate(post[post_id]):
             for image_id in post.iloc[i][image_id].split('|'):
                 image_id = image_id.split("/")[-1].split(".")[0]
                 if image_id in image:
