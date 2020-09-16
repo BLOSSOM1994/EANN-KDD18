@@ -159,9 +159,10 @@ def write_data(flag, image, text_only):
                         data.append(line_data)
 
 
-            #f.close()
-            #print(data)
-            #return post_content,data
+            f.close()
+            data_df = pd.DataFrame(np.array(data), columns=column)
+            print(data)
+            return post_content,data_df
         
         data_df = pd.DataFrame(np.array(data), columns=column)
         write_txt(top_data)
@@ -169,8 +170,8 @@ def write_data(flag, image, text_only):
         return post_content, data_df
 
     post_content, post = read_post(flag)
-    print("Original post length is " + str(len(post_content)))
-    print("Original data frame is " + str(post.shape))
+   # print("Original post length is " + str(len(post_content)))
+   # print("Original data frame is " + str(post.shape))
 
 
     def find_most(db):
