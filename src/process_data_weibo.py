@@ -91,7 +91,7 @@ def write_data(flag, image, text_only):
             print("validation")
             id = pickle.load(open("/content/EANN-KDD18/data/weibo/validate_id.pickle", 'rb'))
         elif flag == "test":
-            print("test)
+            print("test")
             id = pickle.load(open("/content/EANN-KDD18/data/weibo/test_id.pickle", 'rb'))
 
 
