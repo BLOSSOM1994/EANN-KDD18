@@ -160,13 +160,12 @@ def write_data(flag, image, text_only):
 
 
             f.close()
-            data_df = pd.DataFrame(np.array(data), columns=column)
             print(data)
-            return post_content,data_df
+            return post_content,data
         
-        data_df = pd.DataFrame(np.array(data), columns=column)
-        write_txt(top_data)
-        print(data_df)
+    #    data_df = pd.DataFrame(np.array(data), columns=column)
+   #     write_txt(top_data)
+    #    print(data_df)
         return post_content, data_df
 
     post_content, post = read_post(flag)
