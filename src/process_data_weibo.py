@@ -114,7 +114,7 @@ def write_data(flag, image, text_only):
             top_line_data = []
             
             for i, l in enumerate(f.readlines()):
-                key += 1
+                #key += 1
                 # if int(key /3) in index:
                 # print(key/3)
                 # continue
@@ -123,7 +123,7 @@ def write_data(flag, image, text_only):
                     line_data = []
                     twitter_id = str(l).split('|')[0]
                     line_data.append(twitter_id)
-                    print("\n I+1: "+twitter_id)
+                    #print(twitter_id)
 
 
                 if (i + 1) % 3 == 2:
@@ -141,8 +141,9 @@ def write_data(flag, image, text_only):
                             new_seg_list.append(word)
 
                     clean_l = " ".join(new_seg_list)
-                    print(len(clean_l))
+                    #print(len(clean_l))
                     if len(clean_l) > 10 and line_data[0] in id:
+                        
                         post_content.append(l)
                         line_data.append(l)
                         line_data.append(clean_l)
@@ -157,6 +158,7 @@ def write_data(flag, image, text_only):
                         line_data.append(event)
                         print(line_data)
                         data.append(line_data)
+                        print("\n\t"+data)
 
             print(key)
             f.close()
