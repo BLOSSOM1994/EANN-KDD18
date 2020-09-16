@@ -85,10 +85,13 @@ def write_data(flag, image, text_only):
         file_list = [pre_path + "test_nonrumor.txt", pre_path + "test_rumor.txt", \
                          pre_path + "train_nonrumor.txt", pre_path + "train_rumor.txt"]
         if flag == "train":
+            print("train")
             id = pickle.load(open("/content/EANN-KDD18/data/weibo/train_id.pickle", 'rb'))
         elif flag == "validate":
+            print("validation")
             id = pickle.load(open("/content/EANN-KDD18/data/weibo/validate_id.pickle", 'rb'))
         elif flag == "test":
+            print("test)
             id = pickle.load(open("/content/EANN-KDD18/data/weibo/test_id.pickle", 'rb'))
 
 
