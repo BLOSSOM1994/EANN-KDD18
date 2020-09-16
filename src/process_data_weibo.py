@@ -112,10 +112,10 @@ def write_data(flag, image, text_only):
             twitter_id = 0
             line_data = []
             top_line_data = []
-
+            print("yrsssssssssssssssssssssss")
             for i, l in enumerate(f.readlines()):
                 # key += 1
-
+                print("foooooooooooooooooooooooor")
                 # if int(key /3) in index:
                 # print(key/3)
                 # continue
