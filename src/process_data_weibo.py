@@ -142,7 +142,7 @@ def write_data(flag, image, text_only):
 
                     clean_l = " ".join(new_seg_list)
                     print("13243244543546756768678-----------------"+str(len(clean_l)))
-                    print(line_data[0])
+                    print(line_data[0] in id)
                     if len(clean_l) > 10 and line_data[0] in id:
                         
                         post_content.append(l)
