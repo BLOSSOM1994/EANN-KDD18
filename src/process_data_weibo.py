@@ -198,7 +198,7 @@ def write_data(flag, image, text_only):
         ordered_post = []
         ordered_event= []
         label = []
-        post_id = []
+        post_id = 0
         image_id_list = []
         #image = []
 
