@@ -203,7 +203,7 @@ def write_data(flag, image, text_only):
         #image = []
 
         image_id = ""
-        for i, id in enumerate(len(post['post_id'])):
+        for i, id in len(enumerate(post['post_id']):
             for image_id in post.iloc[i]['image_id'].split('|'):
                 image_id = image_id.split("/")[-1].split(".")[0]
                 if image_id in image:
