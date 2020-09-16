@@ -141,7 +141,8 @@ def write_data(flag, image, text_only):
                             new_seg_list.append(word)
 
                     clean_l = " ".join(new_seg_list)
-                    #print(len(clean_l))
+                    print("13243244543546756768678-----------------"+len(clean_l))
+                    print(line_data[0])
                     if len(clean_l) > 10 and line_data[0] in id:
                         
                         post_content.append(l)
@@ -156,7 +157,7 @@ def write_data(flag, image, text_only):
                             event = map_id[event]
 
                         line_data.append(event)
-                        print(line_data)
+                        print("111111111111111111111111111111111111"+line_data)
                         data.append(line_data)
                         print("\n\t"+data)
 
