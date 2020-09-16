@@ -141,7 +141,7 @@ def write_data(flag, image, text_only):
                             new_seg_list.append(word)
 
                     clean_l = " ".join(new_seg_list)
-                    print("13243244543546756768678-----------------"+len(clean_l))
+                    print("13243244543546756768678-----------------"+str(len(clean_l)))
                     print(line_data[0])
                     if len(clean_l) > 10 and line_data[0] in id:
                         
